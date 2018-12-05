@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:textSize="13sp"
+            android:text="录入成绩:  身高(米);体重(公斤)"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:background="@color/page_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <View
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:background="@color/tab_text_selected"
+            android:layout_width="match_parent"
+            android:layout_height="2px"/>
+
+        <TextView
+            android:text="成 绩 录 入"
+            android:textSize="17dp"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:textColor="@color/tab_text_selected"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/recyclerview_layout"/>
+
+
+
+
+
+
+</LinearLayout>

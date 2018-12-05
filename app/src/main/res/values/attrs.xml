@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundView">
+        <!--圆环半径-->
+        <attr name="radius" format="dimension"/>
+        <!--圆环宽度-->
+        <attr name="ring_width" format="dimension"/>
+        <!--圆环颜色-->
+        <attr name="ring_color" format="color"/>
+
+        <!--进度圆环宽度-->
+        <attr name="progress_ring_width" format="dimension"/>
+        <!--进度圆环开始颜色-->
+        <attr name="progress_ring_start_color" format="color"/>
+        <!--进度圆环结束颜色-->
+        <attr name="progress_ring_end_color" format="color"/>
+        
+        <attr name="android_radius" format="dimension"/>
+        
+        <attr name="text_color" format="color"/>
+        
+        <attr name="text_size" format="dimension"/>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="ProgressView">
+        <attr name="pv_textsize" format="dimension"/>
+        <!--内圈-->
+        <attr name="pv_inner_circle" format="dimension"/>
+        <attr name="pv_outter_circle" format="dimension"/>
+        <!--这里是我的特殊含义，设置字的高度-->
+        <attr name="pv_text_height" format="dimension"/>
+        <attr name="pv_xsd_textsize" format="dimension"/>
+        <attr name="pv_stroke_width" format="dimension"/>
+        <attr name="pv_stroke_width_outter" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CheckBoxView">
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressTextView">
+        <attr name="cptv_empty_color" format="color"/>
+        <attr name="cptv_full_color" format="color"/>
+        <attr name="cptv_stroke_width" format="dimension"/>
+        <attr name="cptv_progress" format="float"/>
+    </declare-styleable>
+</resources>

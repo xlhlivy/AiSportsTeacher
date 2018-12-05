@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId 'com.yelai.wearable.teacher'
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        vectorDrawables.useSupportLibrary = true
+
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                includeCompileClasspath = true
+//            }
+//        }
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+    }
+
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    buildTypes {
+        debug{
+            multiDexEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            dexOptions {
+                javaMaxHeapSize "4g"
+                preDexLibraries = false
+                jumboMode = false
+            }
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    annotationProcessor rootProject.ext.dependencies["butterknife-apt"]
+    kapt rootProject.ext.dependencies["butterknife-apt"]
+
+
+//    implementation 'com.github.limedroid:XDroidMvp:v2.0'
+//    annotationProcessor rootProject.ext.dependencies["butterknife-apt"]
+
+//    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+//    implementation rootProject.ext.dependencies["glide"]
+
+//    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    implementation rootProject.ext.dependencies["avi-loading"]
+
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+//    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation "org.jetbrains.anko:anko:$anko_version"
+
+
+    implementation 'cn.dxjia:imagetextbutton:1.0.0' //16 需要支持低版本的时候删除
+    implementation 'com.haibin:calendarview:3.4.5'
+
+    implementation 'com.zjun:rule-view:0.0.1'
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+
+    implementation 'com.github.zhuazhu:SpiderView:1.0.1'
+
+//    implementation'pub.devrel:easypermissions:1.2.0'
+
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'//字体库
+
+    implementation 'com.orhanobut:logger:2.1.1'
+
+    implementation 'me.itangqi.waveloadingview:library:0.3.5'//wave view
+    implementation 'com.github.alamkanak:android-week-view:1.2.6'
+
+//    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.yanyusong.y_divideritemdecoration:y_divideritemdecoration:2.0'
+
+    implementation 'com.github.lguipeng:AnimCheckBox:1.0.1'
+
+    implementation 'com.uniquestudio:checkbox:1.0.10'
+
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.0'
+
+    implementation 'com.zzhoujay.richtext:richtext:3.0.7'
+
+    implementation project(':easypermissions')
+
+
+//    implementation 'xyz.sahildave:searchviewlayout:0.6'
+
+    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+
+//    implementation 'cn.pedant.sweetalert:library:1.3'
+
+
+    //leakCanary
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+//    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //基础框架内容
+    implementation 'com.classic.common:multiple-status-view:1.5.1'
+    // 底部菜单
+//    implementation('com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar') {
+//        exclude group: 'com.android.support', module: 'support-v4'
+//    }
+
+    implementation project(":mvp")
+    implementation project(":FlycoTabLayout_Lib")
+    implementation project(':searchviewlayout')
+    implementation project(':xrecyclerview')
+    implementation project(':sweetalert')
+
+
+
+//            {
+//        exclude group: 'com.android.support'
+//    }
+
+}

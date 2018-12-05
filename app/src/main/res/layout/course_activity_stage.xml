@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_color">
+
+
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@android:color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <ImageView
+            android:src="@drawable/icon_img_default"
+            android:scaleType="fitXY"
+            android:id="@+id/ivBackground"
+            app:layout_constraintDimensionRatio="1.72"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvCourseType"
+            android:scaleType="fitXY"
+            android:background="@drawable/day_right_circle_background"
+            app:layout_constraintLeft_toLeftOf="@id/ivBackground"
+            app:layout_constraintTop_toTopOf="@id/ivBackground"
+            android:text="教学课"
+            android:textSize="11dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvCourseName"
+            app:layout_constraintLeft_toRightOf="@id/ivBackground"
+            app:layout_constraintTop_toTopOf="@id/ivBackground"
+            android:layout_margin="8dp"
+            tools:text="身体唤醒"
+            android:textStyle="bold"
+            android:textColor="@color/text_black_color"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tvCourseDetail"
+            app:layout_constraintLeft_toLeftOf="@id/tvCourseName"
+            app:layout_constraintBottom_toTopOf="@id/tvCourseTime"
+            android:layout_marginBottom="3dp"
+            tools:text="身体唤醒"
+            android:textColor="@color/text_color_6"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tvCourseTime"
+            app:layout_constraintLeft_toLeftOf="@id/tvCourseDetail"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackground"
+            android:layout_marginBottom="6dp"
+            tools:text="身体唤醒"
+            android:textColor="@color/text_color_6"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <include layout="@layout/recyclerview_layout"/>
+
+        <!--<cn.droidlover.xrecyclerview.XRecyclerContentLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/contentLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:recyclerScrollbarNone="true"-->
+        <!--app:recyclerBackgroundColor="@android:color/transparent"-->
+        <!--app:recyclerScrollbarStyle="outsideOverlay" />-->
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+
+            <TextView
+                android:text="阶段名称:"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_6"
+                android:textSize="13dp"
+                android:layout_width="65dp"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:text="准备"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_6"
+                android:textSize="13dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+
+            <TextView
+                android:text="时间要求:"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_6"
+                android:textSize="13dp"
+                android:layout_width="65dp"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:text="20分钟"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_6"
+                android:textSize="13dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <TextView
+               android:background="@drawable/mine_btn_logout_green_background"
+                android:text="添加子阶段"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/rb_btn_background_normal"
+                android:text="编辑"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:textSize="12dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#d6dcec"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:text="热身"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_6"
+                android:textSize="13dp"
+                android:layout_width="65dp"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:text="30分钟"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_6"
+                android:textSize="13dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:background="@drawable/rb_btn_background_normal"
+                android:text="编辑"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:textSize="12dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/rb_btn_background_error"
+                android:text="删除"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:gravity="center"
+                android:textColor="@color/error_text"
+                android:textSize="12dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+
+
+</LinearLayout>

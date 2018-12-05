@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <View
+        android:background="@color/page_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+    <LinearLayout
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <TextView
+            android:text="阶段名称:"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_6"
+            android:textSize="13dp"
+            android:layout_width="65dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:text="准备"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_6"
+            android:textSize="13dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <TextView
+            android:text="时间要求:"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_6"
+            android:textSize="13dp"
+            android:layout_width="65dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:text="20分钟"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_6"
+            android:textSize="13dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvAdd"
+            android:background="@drawable/mine_btn_logout_green_background"
+            android:text="添加子阶段"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tvEdit"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/rb_btn_background_normal"
+            android:text="编辑"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:gravity="center"
+            android:textColor="@color/green"
+            android:textSize="12dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

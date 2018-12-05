@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_color">
+
+
+    <TextView
+
+        android:id="@+id/tvBulletinBoard"
+        android:textColor="@color/text_black_color"
+        android:textSize="12dp"
+        android:padding="10dp"
+        tools:text="haha"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+
+
+</LinearLayout>

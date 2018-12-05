@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:background="@android:color/transparent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+    
+    <ImageView
+        android:src="@drawable/icon_img_default"
+        android:scaleType="fitXY"
+        android:id="@+id/ivBackground"
+        app:layout_constraintDimensionRatio="1.72"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        app:layout_constraintLeft_toRightOf="@id/ivBackground"
+        app:layout_constraintTop_toTopOf="@id/ivBackground"
+        android:layout_margin="8dp"
+        tools:text="身体唤醒"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_3"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/tvCourseDetail"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tvDesc1"
+            tools:text="身体唤醒"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingRight="6dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/et_background"
+            android:textColor="@color/text_color_6"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tvDesc2"
+            android:visibility="invisible"
+            android:layout_marginLeft="6dp"
+            tools:text="身体唤醒"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingRight="6dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/et_background"
+            android:textColor="@color/text_color_6"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tvDesc3"
+            android:layout_marginLeft="6dp"
+            tools:text="身体唤醒"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingRight="6dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/et_background"
+            android:textColor="@color/text_color_6"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCourseDetail"
+        android:layout_marginTop="10dp"
+
+        android:textColor="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/ck_btn_background_checked_3_solid"
+        android:text="开始考试"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvFinish"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCourseDetail"
+        android:layout_marginTop="10dp"
+
+        android:textColor="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/ck_btn_background_checked_3_solid"
+        android:text="编辑成绩"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvContinue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCourseDetail"
+        android:layout_marginTop="10dp"
+
+        android:textColor="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/ck_btn_background_checked_3_solid"
+        android:text="继续考试"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@id/tvName"
+        app:layout_constraintTop_toTopOf="@id/tvStart"
+        app:layout_constraintBottom_toBottomOf="@id/tvStart"
+        android:id="@+id/tvLeakNum"
+        android:textColor="#fb9966"
+        android:text=""
+        android:textSize="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</android.support.constraint.ConstraintLayout>

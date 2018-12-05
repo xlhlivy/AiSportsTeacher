@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:text="体测"
+            android:textSize="18dp"
+            android:textColor="@color/text_black_color"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tvAddClass"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:text="添加班级"
+            android:textSize="13dp"
+            android:textColor="@color/tab_text_selected"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <include layout="@layout/recyclerview_layout"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+
+        android:paddingLeft="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <com.yelai.wearable.widget.CircleProgressTextView
+            android:layout_centerVertical="true"
+            android:background="@drawable/tv_circle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:text="80"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textColor="@color/green"
+            android:textSize="24dp"
+            android:id="@+id/tvScore"
+            android:layout_margin="4dp"
+            app:cptv_empty_color="@color/white"
+            app:cptv_full_color="@color/tab_text_selected"
+            app:cptv_stroke_width="1dp"/>
+
+
+        <CheckBox
+
+            android:layout_marginRight="-8dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignRight="@id/tvScore"
+            android:layout_alignBottom="@id/tvScore"
+            android:button="@null"
+            android:background="@drawable/course_sign_unchecked"
+            android:id="@+id/cbCheck"
+            android:layout_width="26dp"
+            android:layout_height="26dp" />
+
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@id/tvScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:id="@+id/tvName"
+                android:textSize="14dp"
+                android:text="姓名:"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_black_color"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp" />
+
+            <TextView
+                android:id="@+id/tvBmi"
+                android:textSize="14dp"
+                android:text="姓名:"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_black_color"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp" />
+
+            <TextView
+                android:id="@+id/tvHeight"
+                android:textSize="14dp"
+                android:text="姓名:"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_black_color"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:textSize="14dp"
+                android:text="姓名:"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_black_color"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvCourseType"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tvScore"
+            android:background="@drawable/day_left_circle_green_background"
+            android:textSize="11dp"
+            android:text="教学课"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="50dp"
+            android:layout_height="22dp" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvHeartbeat"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="安静心率"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+           <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvMorningHeartbeat"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="晨脉"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvSleepTime"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="睡眠时间"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="身体状况"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvSport"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="当日运动量"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvCourseSport"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="本课运动量"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:background="@color/page_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <View
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:background="@color/tab_text_selected"
+            android:layout_width="match_parent"
+            android:layout_height="2px"/>
+
+        <TextView
+            android:text="本 学 期 运 动 情 况"
+            android:textSize="15dp"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:textColor="@color/tab_text_selected"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="有效运动时间"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="有效运动距离(公里)"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="有效运动次数"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+    <View
+        android:background="@color/tab_text_selected"
+        android:layout_width="match_parent"
+        android:layout_height="2px"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tvSign"
+            android:gravity="center"
+            android:text="签 到"
+            android:textColor="@color/tab_text_selected"
+            android:textSize="16dp"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvRemove"
+            android:gravity="center"
+            android:text="移 除 学 员"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:background="@color/tab_text_selected"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

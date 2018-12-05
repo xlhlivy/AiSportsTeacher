@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/page_bg_color</color>
+    <!--<color name="colorPrimaryDark">@color/color_lighter_gray</color>-->
+    <color name="colorAccent">@color/text_primary</color>
+
+    <!--<color name="colorPrimary">#ffffff</color>-->
+    <color name="colorPrimaryDark">#ffffff</color>
+    <!--<color name="colorAccent">#ffffff</color>-->
+
+    <!--<color name="page_bg_color">#f5f5f5</color>-->
+
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#87000000</color>
+    <color name="text_disabled">#38000000</color>
+
+    <color name="hit_text_color">#a1a7b8</color>
+
+    <color name="error_text">#ff6b53</color>
+
+    <color name="page_bg_color">#f9f9f9</color>
+
+    <color name="tab_text_selected">#1ad1a3</color>
+
+    <color name="tab_text_unselected">#d6dcec</color>
+
+    <color name="text_color_6">#666</color>
+
+    <color name="text_color_3">#333</color>
+
+    <color name="text_color_c">#ccc</color>
+
+
+
+    <color name="day_wearable_bind_color">#19d4ae</color>
+
+    <color name="green">#15b975</color>
+
+    <color name="green_alpha">#8015b975</color>
+
+    <color name="background">#586179</color>
+
+    <color name="text_normal">#ffffff</color>
+    <color name="text_selected">#8089a1</color>
+
+    <color name="text_color">#595959</color>
+
+    <color name="text_black_color">#586179</color>
+
+    <color name="text_grey_color">#bbc2d6</color>
+
+    <color name="white">#fff</color>
+
+    <color name="color_gray">#9a9a9a</color>
+
+    <color name="color_black">#000000</color>
+
+    <color name="color_division_line">@color/color_lighter_gray</color>
+
+    <color name="color_lighter_gray">#ddd</color>
+
+    <color name="color_darker_gray">#aaa</color>
+
+    <color name="divider_color">#e0e4ed</color>
+
+
+    <color name="event_color_01">#59dbe0</color>
+    <color name="event_color_02">#f57f68</color>
+    <color name="event_color_03">#87d288</color>
+    <color name="event_color_04">#f8b552</color>
+
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yelai.wearable">
+
+    <!-- 获取GSM网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许获取Wi-Fi网络状态改变信息 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- SD 卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--<application-->
+        <!--android:name=".App"-->
+        <!--android:allowBackup="true"-->
+        <!--android:icon="@mipmap/xdroid_logo_128"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:largeHeap="true"-->
+        <!--android:supportsRtl="true"-->
+        <!--android:theme="@style/AppTheme.NoActionBar">-->
+
+        <!--&lt;!&ndash;android:theme="@style/AppTheme">&ndash;&gt;-->
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+
+        <!--<activity-->
+            <!--android:name=".ui.HomeActivity"-->
+            <!--android:screenOrientation="portrait">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen"
+            android:icon="@mipmap/ic_launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.LoginActivity"/>
+
+
+        <activity android:name=".ui.course.SearchActivity"/>
+        <activity android:name=".ui.course.CourseDetailActivity"/>
+        <activity android:name=".ui.course.StudentDetailActivity"/>
+
+        <activity android:name=".ui.course.AddCourseActivity"/>
+
+        <activity android:name=".ui.examination.EditClassActivity"/>
+
+        <activity android:name=".ui.course.CourseStageActivity"/>
+
+
+        <activity android:name=".ui.examination.ExaminationActivity"/>
+
+
+        <activity android:name=".ui.discovery.DiscoveryDetailActivity"/>
+    A
+        <activity android:name=".ui.sport.SportTypeChoiceActivity"/>
+
+        <activity android:name=".ui.sport.SportRunWithoutMapActivity"/>
+
+        <activity android:name=".ui.mine.ModifyPasswordActivity"/>
+        <activity android:name=".ui.login.ForgetPasswordActivity"/>
+
+
+
+
+        <activity android:name=".ui.mine.DeviceActivity"/>
+        <activity android:name=".ui.mine.SettingActivity"/>
+        <activity android:name=".ui.mine.SportHistoryActivity"/>
+        <activity android:name=".ui.mine.SportHistoryDetailActivity"/>
+        <activity android:name=".ui.mine.CourseActivity"/>
+        <activity android:name=".ui.mine.BodyInfoActivity"/>
+        <activity android:name=".ui.mine.PhysiqueDetailActivity"/>
+        <activity android:name=".ui.examination.AddClassActivity"/>
+
+        <activity android:name=".ui.examination.ScoreRecordSitupsActivity"/>
+
+        <activity android:name=".ui.examination.ScoreRecordHeightAndWeightActivity"/>
+
+        <activity android:name=".ui.examination.ScoreRecordRunActivity"/>
+        <activity android:name=".ui.examination.ChoiceCategoryActivity"/>
+
+        <activity android:name=".ui.examination.ScoreRecordRunStopWatchActivity"/>
+        <activity android:name=".ui.examination.ScoreRecordRunAssignScoreActivity"/>
+
+
+        <activity android:name=".ui.HomeActivity"/>
+        <activity android:name=".ui.AboutActivity" />
+        <activity android:name=".base.WebActivity" />
+    </application>
+
+</manifest>

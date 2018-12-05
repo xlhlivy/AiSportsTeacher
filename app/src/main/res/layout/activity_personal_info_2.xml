@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:textColor="@color/text_color"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:text="当前体重"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/txtWeight"
+            android:text="20Kg"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#15b975"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.zjun.widget.RuleView
+            android:id="@+id/rulerWeight"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:zjun_textSize="16sp"
+            app:zjun_bgColor="@android:color/transparent"
+            app:zjun_indicatorLineWidth="5dp"
+            app:zjun_gradationColor="#999"
+            app:gv_indicatorLineLen="46dp"
+            app:gv_maxValue="200"
+            app:gv_minValue="30"
+            app:gv_currentValue="50"
+            app:gv_gradationUnit="0.1"
+            app:gv_gradationGap="7dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:textColor="@color/text_color"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:text="当前身高"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/txtHeight"
+            android:text="20Kg"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#15b975"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.zjun.widget.RuleView
+            android:id="@+id/rulerHeight"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:zjun_textSize="16sp"
+            app:zjun_bgColor="@android:color/transparent"
+            app:zjun_indicatorLineWidth="5dp"
+            app:zjun_gradationColor="#999"
+            app:gv_indicatorLineLen="46dp"
+            app:gv_maxValue="300"
+            app:gv_minValue="30"
+            app:gv_currentValue="160"
+            app:gv_gradationUnit="1"
+            app:gv_gradationGap="7dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:textSize="14dp"
+        android:textColor="@color/text_normal"
+        android:text="下一步"
+        android:layout_marginLeft="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_selector"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+
+
+
+
+
+</LinearLayout>

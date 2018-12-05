@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="你的运动基础如何?"
+                android:textColor="@color/text_black_color"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/cbExperience0"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="38dp"
+                    android:background="@drawable/ck_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="零基础"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="很少运动,需要从入门开始,适应运动的节奏"
+                    android:textColor="@color/text_grey_color"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+                <RadioButton
+                    android:id="@+id/cbExperience60"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="38dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ck_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="有经验"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="有运动习惯,具备一定的运动基础"
+                    android:textColor="@color/text_grey_color"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+                <RadioButton
+                    android:id="@+id/cbExperience100"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="38dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ck_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="有经验"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="有规律的运动习惯,运动能力突出"
+                    android:textColor="@color/text_grey_color"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="你感兴趣的运动场所"
+                android:textColor="@color/text_black_color"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbSportPlace0"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ck_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="室内"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="17dp" />
+
+
+                <CheckBox
+                    android:id="@+id/cbSportPlace1"
+
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ck_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="户外"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbSportPlace2"
+
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ck_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="运动馆"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="17dp" />
+
+
+                <CheckBox
+                    android:id="@+id/cbSportPlace3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ck_btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="健身房"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="63dp"
+                android:layout_marginRight="63dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/btn_selector"
+                android:text="下一步"
+                android:textColor="@color/text_normal"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

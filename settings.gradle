@@ -1,0 +1,13 @@
+include ':app',':mvp',':FlycoTabLayout_Lib',':searchviewlayout',':xrecyclerview',':easypermissions',':sweetalert'
+
+project(':mvp').projectDir = new File(settingsDir,'common/mvp')
+
+project(':FlycoTabLayout_Lib').projectDir = new File(settingsDir,'common/FlycoTabLayout_Lib')
+
+project(':searchviewlayout').projectDir = new File(settingsDir,'common/searchviewlayout')
+
+project(':xrecyclerview').projectDir = new File(settingsDir,'common/xrecyclerview')
+
+project(':easypermissions').projectDir = new File(settingsDir,'common/easypermissions')
+
+project(':sweetalert').projectDir = new File(settingsDir,'common/sweetalert')

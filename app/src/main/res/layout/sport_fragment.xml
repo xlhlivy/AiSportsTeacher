@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:text="自由运动"
+            android:textSize="18dp"
+            android:textColor="@color/text_black_color"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:background="@drawable/sport_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvRunDistanceTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            tools:text="80.9"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textColor="@color/text_black_color"
+            android:textSize="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.18" />
+
+
+        <TextView
+            android:id="@+id/tvRunDistanceDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="本学期跑步总公里"
+            android:textColor="@color/text_black_color"
+            android:textSize="13dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRunDistanceTotal" />
+
+
+
+        <TextView
+            android:id="@+id/tvRunTimeTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            tools:text="80.9"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textColor="@color/text_black_color"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.50" />
+
+        <TextView
+            android:id="@+id/tvRunTimeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="本学期运动总时间(min)"
+            android:textColor="@color/text_black_color"
+            android:textSize="13dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRunTimeTotal" />
+
+
+
+        <Button
+            android:id="@+id/btnGo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.87"
+            android:background="@drawable/sport_btn_go"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+
+        <Button
+            android:id="@+id/btnSportTypeChoice"
+            android:background="@drawable/day_left_circle_background"
+
+            app:layout_constraintBottom_toBottomOf="@id/btnGo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnGo"
+            app:layout_constraintVertical_bias="0.40"
+            android:paddingRight="11dp"
+            android:paddingLeft="15dp"
+            android:textSize="13dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:text="运动项目选择"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>

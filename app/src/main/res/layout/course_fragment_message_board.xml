@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_color">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <include layout="@layout/recyclerview_layout"/>
+
+        <!--<cn.droidlover.xrecyclerview.XRecyclerContentLayout-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/contentLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:recyclerScrollbarNone="true"-->
+            <!--app:recyclerBackgroundColor="@android:color/transparent"-->
+            <!--app:recyclerScrollbarStyle="outsideOverlay" />-->
+
+    </FrameLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:background="#e0e4ed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:layout_centerInParent="true"
+            android:id="@+id/btnWriteMessage"
+            android:textSize="14dp"
+            android:textColor="#dde0e9"
+            android:text="填写评论"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_white_background_normal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

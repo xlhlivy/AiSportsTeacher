@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/ivBackground"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/et_background"
+                    android:textColor="@color/text_black_color"
+                    app:layout_constraintDimensionRatio="1.78"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:textSize="13sp"
+                    android:text="名称"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/tvStageName"
+                    android:background="@drawable/et_background"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    tools:text="haha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:textSize="13sp"
+                    android:text="测试老师"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvTeacherName"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    tools:text="haha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <View
+                android:background="@color/page_bg_color"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"/>
+
+            <LinearLayout
+                android:id="@+id/llExaminationItem"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp">
+
+
+                    <View
+                        android:layout_gravity="center"
+                        android:background="@color/tab_text_selected"
+                        android:layout_width="3dp"
+                        android:layout_height="22dp"/>
+
+                    <TextView
+                        android:textColor="@color/text_color_3"
+                        android:textSize="13dp"
+                        android:layout_gravity="center"
+                        android:lines="1"
+                        android:text="选择体测项目:(可多选)"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="42dp">
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="身高体重"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"/>
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="握力"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="42dp">
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="引体向上"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"/>
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="仰卧起坐"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="42dp">
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="1000/800m跑步"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"/>
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="握力"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="42dp">
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="肺活量"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"/>
+
+                    <com.yelai.wearable.widget.CheckBoxView
+                        app:text="坐立体前屈"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:background="@color/page_bg_color"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"/>
+
+            <LinearLayout
+                android:paddingTop="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <View
+                        android:layout_gravity="center"
+                        android:background="@color/tab_text_selected"
+                        android:layout_width="3dp"
+                        android:layout_height="22dp"/>
+
+                    <TextView
+                        android:textColor="@color/text_color_3"
+                        android:textSize="13dp"
+                        android:layout_gravity="center"
+                        android:lines="1"
+                        android:text="参考人员:"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <ImageView
+                        android:id="@+id/ivIconScanBar"
+                        android:layout_gravity="center"
+                        android:src="@drawable/scan_bar"
+                        android:background="@color/text_color_6"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp" />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rlScanBar"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/course_icon_close"
+            android:layout_width="26dp"
+            android:layout_height="26dp" />
+
+
+        <ImageView
+            android:id="@+id/ivScanBar"
+            android:src="@drawable/scan_bar"
+            android:layout_centerInParent="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
+

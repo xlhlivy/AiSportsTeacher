@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_title_textsize">18sp</dimen>
+    <dimen name="item_title_kid_textsize">10sp</dimen>
+    <dimen name="item_text_textsize">16sp</dimen>
+    <dimen name="item_text_kid_textsize">15sp</dimen>
+    <dimen name="item_title_message">12sp</dimen>
+
+
+
+    <!-- 1280x720-->
+    <dimen name="gridview_item_width">65dp</dimen>
+    <dimen name="gridview_item_height">75.5dp</dimen>
+    <dimen name="gridview_fontsize">13sp</dimen>
+    <dimen name="gridview_percentfont">27sp</dimen>
+
+    <dimen name="popview_about_title">10sp</dimen>
+    <dimen name="popview_about_version">15sp</dimen>
+    <dimen name="popview_about_name">25sp</dimen>
+
+    <!--渐变进度圈-->
+    <dimen name="progressview_idread">180dp</dimen>
+    <dimen name="pv_textsize">20sp</dimen>
+    <dimen name="pv_xsd_textsize">20sp</dimen>
+    <dimen name="pv_stroke_width">16px</dimen>
+    <dimen name="pv_stroke_width_outter">12px</dimen>
+    <dimen name="pv_circle_width">32dp</dimen>
+
+    <!--主界面的按钮value-->
+    <dimen name="tv_padding_top">40px</dimen>
+    <dimen name="tv_padding_bottom">35px</dimen>
+    <dimen name="tv_drawpadding">15px</dimen>
+
+    <dimen name="divider">1px</dimen>
+
+
+
+
+    <dimen name="textSize_small_10">10sp</dimen>
+    <dimen name="textSize_small">12sp</dimen>
+    <dimen name="textSize_content">14sp</dimen>
+    <dimen name="textSize_titleSmall">16sp</dimen>
+    <dimen name="textSize_title">18sp</dimen>
+
+    <dimen name="division_line">0.5dp</dimen>
+
+
+    <dimen name="padding_common">10dp</dimen>
+    <dimen name="padding_common_h">15dp</dimen>
+    <dimen name="padding_common_v">10dp</dimen>
+    <dimen name="padding_common_d">5dp</dimen>
+</resources>

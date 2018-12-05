@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:gravity="center_vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/tvSportName"
+        tools:text="身体唤醒"
+        android:textColor="@color/text_black_color"
+        android:textSize="14dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivNext"
+        android:rotation="180"
+        android:background="@drawable/title_black_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/mine_white_background_normal"
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:text="体质管理"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="17dp"
+                />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <Button
+                android:id="@+id/btnPhysiqueDetail"
+                android:textSize="14dp"
+                android:textColor="@color/text_normal"
+                android:text="详情"
+                android:background="@drawable/mine_btn_logout_green_background"
+                android:layout_width="70dp"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="100dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvCompositeScore"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="综合评分"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvClassRank"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="全班排名"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvSchoolRank"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="全校排名"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="15dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/mine_white_background_normal"
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:text="体形管理"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="17dp"
+                />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <Button
+                android:id="@+id/btnBodyDetail"
+                android:textSize="14dp"
+                android:textColor="@color/text_normal"
+                android:text="录入"
+                android:background="@drawable/mine_btn_logout_green_background"
+                android:layout_width="70dp"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:text="形体指数"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvBodyExponent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:text="80"
+                    android:textAppearance="@style/TextAppearance.FontPath"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="27dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/tvBmi"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="bmi"
+                    android:textColor="@color/hit_text_color"
+                    android:textSize="13dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="体重"
+                    android:textColor="@color/hit_text_color"
+                    android:textSize="13dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/mine_white_background_normal"
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:text="健康风险"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textColor="@color/text_black_color"
+            android:textSize="17dp"
+            />
+
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/stlSwitchSegment"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:tl_bar_color="#ffffff"
+            app:tl_indicator_color="#1ad1a3"
+            app:tl_indicator_corner_radius="16dp"
+            app:tl_textSelectColor="@color/white"
+            app:tl_divider_color="@color/hit_text_color"
+            app:tl_textUnselectColor="@color/text_black_color"
+            app:tl_bar_stroke_color="@color/hit_text_color"
+            app:tl_tab_width="100dp"
+            app:tl_tab_padding="20dp"/>
+
+
+        <TextView
+
+            android:id="@+id/tvRisk"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="主要风险  久坐"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

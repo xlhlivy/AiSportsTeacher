@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/page_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="体重"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:inputType="number"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_selected"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="KG"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="身高"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <EditText
+
+            android:id="@+id/etHeight"
+            android:inputType="number"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_selected"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="CM"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="胸围"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <EditText
+
+            android:id="@+id/etBust"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_selected"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="CM"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="腰围"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <EditText
+
+            android:id="@+id/etWaistline"
+            android:inputType="number"
+
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_selected"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="CM"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="上臀围"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <EditText
+
+            android:id="@+id/etHipline"
+            android:inputType="number"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_selected"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="CM"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="大腿围"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/etBigThigh"
+            android:inputType="number"
+
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_selected"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="CM"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="小腿围"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/etLittleThigh"
+            android:inputType="number"
+
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_selected"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="CM"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+</LinearLayout>

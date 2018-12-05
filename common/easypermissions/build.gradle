@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'jacoco-android'
+
+android {
+
+    buildToolsVersion '28.0.2'
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+//    api "com.android.support:appcompat-v7:$support_library_version"
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api "com.android.support:support-compat:$rootProject.ext.android.VSupportSdk"
+    api "com.android.support:support-fragment:$rootProject.ext.android.VSupportSdk"
+
+
+
+
+}
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_color">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <include layout="@layout/recyclerview_layout"/>
+
+        <!--<cn.droidlover.xrecyclerview.XRecyclerContentLayout-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/contentLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:recyclerScrollbarNone="true"-->
+            <!--app:recyclerBackgroundColor="@android:color/transparent"-->
+            <!--app:recyclerScrollbarStyle="outsideOverlay" />-->
+
+    </FrameLayout>
+
+
+
+
+
+
+    <View
+        android:background="@color/tab_text_selected"
+        android:layout_width="match_parent"
+        android:layout_height="2px"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tvStage"
+            android:gravity="center"
+            android:text="设 置 课 程 阶 段"
+            android:textColor="@color/tab_text_selected"
+            android:textSize="16dp"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvSign"
+            android:gravity="center"
+            android:text="点 名"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:background="@color/tab_text_selected"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

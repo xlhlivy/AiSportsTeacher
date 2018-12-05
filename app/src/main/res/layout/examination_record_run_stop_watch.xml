@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:background="#d6dcec"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <LinearLayout
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+
+                <View
+                    android:layout_gravity="center"
+                    android:background="@color/tab_text_selected"
+                    android:layout_width="3dp"
+                    android:layout_height="13dp"/>
+
+                <TextView
+                    android:textColor="@color/text_color_3"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:lines="1"
+                    android:text="考试要求:"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/tvRequire"
+                android:textColor="@color/text_color_6"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:lines="1"
+                android:text="选择体测项目:"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+
+                <View
+                    android:layout_gravity="center"
+                    android:background="@color/tab_text_selected"
+                    android:layout_width="3dp"
+                    android:layout_height="13dp"/>
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:lines="1"
+                    android:text="录入成绩:  个数"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp">
+
+
+            <View
+                android:layout_gravity="center"
+                android:background="@color/tab_text_selected"
+                android:layout_width="3dp"
+                android:layout_height="13dp"/>
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:textColor="@color/text_color_3"
+                android:textSize="13dp"
+                android:layout_gravity="center"
+                android:lines="1"
+                android:text="时间要求:  00:00/05:00"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <include layout="@layout/recyclerview_layout"/>
+    </FrameLayout>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:background="@color/page_bg_color"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/rlReset"
+            android:background="@drawable/btn_circle_background_green_stroke"
+            android:layout_width="115dp"
+            android:layout_height="115dp">
+
+            <View
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_circle_background_green_solid"
+                android:layout_width="95dp"
+                android:layout_height="95dp"/>
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_centerInParent="true"
+                android:text="开始"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlReset"
+            app:layout_constraintLeft_toRightOf="@id/rlStart"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/btn_circle_background_grey_stroke"
+            android:layout_width="115dp"
+            android:layout_height="115dp">
+
+            <View
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_circle_background_grey_solid"
+                android:layout_width="95dp"
+                android:layout_height="95dp"/>
+
+            <TextView
+                android:id="@+id/tvReset"
+                android:layout_centerInParent="true"
+                android:text="复位"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

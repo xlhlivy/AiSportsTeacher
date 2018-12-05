@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/llFemale"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+            <ImageView
+                android:src="@drawable/personal_info_gender_female"
+                android:layout_width="140dp"
+                android:layout_height="140dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="12dp"
+                android:text="女"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            
+            
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llMale"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/personal_info_gender_male"
+                android:layout_width="140dp"
+                android:layout_height="140dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="12dp"
+                android:text="男"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+
+    <TextView
+
+        android:id="@+id/btnBirthday"
+        android:text="生日"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="#15b975"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+    <View
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:textSize="14dp"
+        android:textColor="@color/text_normal"
+        android:text="下一步"
+        android:layout_marginLeft="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_selector"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+
+
+
+
+
+</LinearLayout>

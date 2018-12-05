@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="体重"
+            android:textColor="@color/text_black_color"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="体重"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tvValue"
+            android:inputType="number"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="36dp"
+            android:textColor="@color/text_black_color"
+            android:gravity="right|center_vertical"
+            android:hint=""
+            android:textSize="15dp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvUnity"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="KG"
+            android:textColor="@color/hit_text_color"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+</FrameLayout>

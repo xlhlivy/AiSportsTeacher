@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_margin="6dp"
+        android:id="@+id/ivHeader"
+        android:src="@drawable/btn_circle_background_grey_stroke"
+        android:scaleType="fitXY"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:background="@drawable/btn_circle_background_green_solid"
+        android:textColor="@color/white"
+        android:text="1"
+        android:textSize="9dp"
+        android:gravity="center"
+        android:layout_alignRight="@id/ivHeader"
+        android:id="@+id/tvRank"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="-6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:textColor="@color/text_color_3"
+        android:textSize="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:text="3分15秒"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="@color/text_color_3"
+        android:textSize="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

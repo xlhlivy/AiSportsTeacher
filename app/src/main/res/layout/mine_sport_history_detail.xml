@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/page_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@android:color/transparent"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <ImageView
+            android:src="@drawable/icon_img_default"
+            android:scaleType="fitXY"
+            android:id="@+id/ivBackground"
+            app:layout_constraintDimensionRatio="1.72"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvCourseType"
+            android:scaleType="fitXY"
+            android:background="@drawable/day_right_circle_background"
+            app:layout_constraintLeft_toLeftOf="@id/ivBackground"
+            app:layout_constraintTop_toTopOf="@id/ivBackground"
+            android:text="教学课"
+            android:textSize="11dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvCourseName"
+            app:layout_constraintLeft_toRightOf="@id/ivBackground"
+            app:layout_constraintTop_toTopOf="@id/ivBackground"
+            android:layout_margin="8dp"
+            tools:text="身体唤醒"
+            android:textStyle="bold"
+            android:textColor="@color/text_black_color"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tvCourseDetail"
+            app:layout_constraintLeft_toLeftOf="@id/tvCourseName"
+            app:layout_constraintBottom_toTopOf="@id/tvCourseTime"
+            android:layout_marginBottom="3dp"
+            tools:text="身体唤醒"
+            android:textColor="@color/text_color_6"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tvCourseTime"
+            app:layout_constraintLeft_toLeftOf="@id/tvCourseDetail"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackground"
+            android:layout_marginBottom="6dp"
+            tools:text="身体唤醒"
+            android:textColor="@color/text_color_6"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvCourseTime2"
+            app:layout_constraintTop_toTopOf="@id/tvEdit"
+            app:layout_constraintBottom_toBottomOf="@id/tvEdit"
+            app:layout_constraintLeft_toLeftOf="@id/tvCourseDetail"
+            tools:text="身体唤醒"
+            android:textColor="@color/text_color_6"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="@id/ivBackground"
+            android:layout_marginBottom="10dp"
+
+            android:id="@+id/tvEdit"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/rb_btn_background_normal"
+            android:text="编辑"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:gravity="center"
+            android:textColor="@color/green"
+            android:textSize="12dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvStrength"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                tools:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="运动强度"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvDensity"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                tools:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="运动密度"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvStep"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                tools:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="平均步数"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvMotion"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                tools:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="平均运动量"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvHeart"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                tools:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="平均心率"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginBottom="16dp"
+            android:background="#d6dcec"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" >
+
+
+            <TextView
+                android:id="@+id/tvConsume"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                tools:text="80"
+                android:textAppearance="@style/TextAppearance.FontPath"
+                android:textColor="@color/text_black_color"
+                android:textSize="24dp"
+                />
+
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:text="平均消耗"
+                android:textColor="@color/hit_text_color"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
