@@ -54,11 +54,11 @@ public abstract class RecyclerAdapter<T, F extends RecyclerView.ViewHolder> exte
      * @param data
      */
     public void addData(List<T> data) {
+        if (this.data == null) {
+            this.data = new ArrayList<>();
+        }
         int preSize = this.data.size();
         if (data != null && data.size() > 0) {
-            if (this.data == null) {
-                this.data = new ArrayList<T>();
-            }
             this.data.addAll(data);
             notifyItemRangeInserted(preSize, this.data.size());
         }

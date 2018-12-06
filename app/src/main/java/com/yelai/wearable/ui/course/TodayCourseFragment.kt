@@ -75,27 +75,27 @@ open class TodayCourseFragment : BaseListFragment<CourseTime, CourseContract.Pre
 
                 when(data.type){
                     "1"->{
-                        itemView.tvCourseType.text = "教学课";
+                        itemView.tvCourseType.text = "教学课"
                         itemView.tvCourseType.setBackgroundResource(R.drawable.day_right_circle_green_background)
                         itemView.ivBackground.load(R.drawable.course_item_background_banner1)
                     }
 
                     "2"->{
-                        itemView.tvCourseType.text = "训练课";
+                        itemView.tvCourseType.text = "训练课"
                         itemView.tvCourseType.setBackgroundResource(R.drawable.day_right_circle_orange_background)
                         itemView.ivBackground.load(R.drawable.course_item_background_banner2)
 
                     }
 
                     "3"->{
-                        itemView.tvCourseType.text = "兴趣课";
+                        itemView.tvCourseType.text = "兴趣课"
                         itemView.tvCourseType.setBackgroundResource(R.drawable.day_right_circle_red_background)
                         itemView.ivBackground.load(R.drawable.course_item_background_banner3)
 
 
                     }
                     else->{
-                        itemView.tvCourseType.text = "训练课";
+                        itemView.tvCourseType.text = "训练课"
                         itemView.tvCourseType.setBackgroundResource(R.drawable.day_right_circle_orange_background)
                         itemView.ivBackground.load(R.drawable.course_item_background_banner2)
 

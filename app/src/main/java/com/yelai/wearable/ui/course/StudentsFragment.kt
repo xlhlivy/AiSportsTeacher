@@ -16,10 +16,10 @@ import com.yelai.wearable.R
 import com.yelai.wearable.adapter.BaseAdapter
 import com.yelai.wearable.adapter.ViewHolder
 import com.yelai.wearable.base.BaseListFragment
+import com.yelai.wearable.contract.CourseContract
 import com.yelai.wearable.model.CourseTimeDetail
 import com.yelai.wearable.model.Page
 import com.yelai.wearable.model.Student
-import com.yelai.wearable.contract.CourseContract
 import com.yelai.wearable.present.PCourse
 import com.yelai.wearable.showToast
 import io.reactivex.subjects.PublishSubject
@@ -42,7 +42,7 @@ class StudentsFragment : BaseListFragment<Student, CourseContract.Presenter>(), 
 
         if(type == CourseContract.Success.StudentAssign){
 
-            p.courseTimesDetail(courseTimeDetail!!.timesId)
+            p.courseTimesDetail(courseTimeDetail!!.times_id)
 
             contentLayout.recyclerView.refreshData()
 
@@ -79,7 +79,7 @@ class StudentsFragment : BaseListFragment<Student, CourseContract.Presenter>(), 
 
     override fun onRefresh() {
         if(courseTimeDetail != null){
-            p.studentStatus(courseTimeDetail!!.timesId)
+            p.studentStatus(courseTimeDetail!!.times_id)
         }
     }
 
@@ -93,7 +93,7 @@ class StudentsFragment : BaseListFragment<Student, CourseContract.Presenter>(), 
     private val markAttendanceViewDialog by lazy{
         MarkAttendanceViewDialog(this@StudentsFragment.context,object:MarkAttendanceViewDialog.Callback{
             override fun done(memberId:String,status: String) {
-                p.studentAssign(courseTimeDetail!!.timesId,memberId,status)
+                p.studentAssign(courseTimeDetail!!.times_id,memberId,status)
             }
         })
     }
@@ -110,8 +110,8 @@ class StudentsFragment : BaseListFragment<Student, CourseContract.Presenter>(), 
         contentLayout.recyclerView.setPage(1, 1)
         contentLayout.recyclerView.onRefreshAndLoadMoreListener = object : XRecyclerView.OnRefreshAndLoadMoreListener {
             override fun onRefresh() {
-//                p.courseTimesDetail(courseTimeDetail!!.timesId)
-                p.studentStatus(courseTimeDetail!!.timesId)
+//                p.courseTimesDetail(courseTimeDetail!!.times_id)
+                p.studentStatus(courseTimeDetail!!.times_id)
                 contentLayout.refreshState(false)
             }
             override fun onLoadMore(page: Int) {}
@@ -122,7 +122,7 @@ class StudentsFragment : BaseListFragment<Student, CourseContract.Presenter>(), 
 
             if(it != realStatus){
                 realStatus = it
-                AppData.setCourseStatus(courseTimeDetail!!.timesId,it)
+                AppData.setCourseStatus(courseTimeDetail!!.times_id,it)
             }
 
             tvStage.alpha = .5f
@@ -165,7 +165,7 @@ class StudentsFragment : BaseListFragment<Student, CourseContract.Presenter>(), 
     override fun onStartLazy() {
         if(courseTimeDetail == null || tvStage == null)return
 
-        realStatus = AppData.getCourseStatus(courseTimeDetail!!.timesId)
+        realStatus = AppData.getCourseStatus(courseTimeDetail!!.times_id)
         statusObserver.onNext(realStatus)
 
         if(AppData.isBackFromPageWithDataAndCleanData(StudentDetailActivity::class.java)){
@@ -237,20 +237,20 @@ class StudentsFragment : BaseListFragment<Student, CourseContract.Presenter>(), 
                         markAttendanceViewDialog.status = "2"
                     }
 
-                    markAttendanceViewDialog.memberId = item.memberId.toString()
+                    markAttendanceViewDialog.memberId = item.member_id.toString()
 
                     markAttendanceViewDialog.show()
 
                 }else{
                     //查看学生详情
-                    StudentDetailActivity.launch(this@StudentsFragment.context,item.apply { courseType = courseTimeDetail!!.type;timesId = courseTimeDetail!!.timesId })
+                    StudentDetailActivity.launch(this@StudentsFragment.context,item.apply { courseType = courseTimeDetail!!.type;timesId = courseTimeDetail!!.times_id })
                 }
 
             }
 
             holder.itemView.setOnLongClickListener(object :View.OnLongClickListener{
                 override fun onLongClick(v: View?): Boolean {
-                    StudentDetailActivity.launch(this@StudentsFragment.context,item.apply { courseType = courseTimeDetail!!.type;timesId = courseTimeDetail!!.timesId })
+                    StudentDetailActivity.launch(this@StudentsFragment.context,item.apply { courseType = courseTimeDetail!!.type;timesId = courseTimeDetail!!.times_id })
                     return true
                 }
             })

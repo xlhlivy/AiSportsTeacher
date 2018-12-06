@@ -13,13 +13,10 @@ public class CourseTimeDetail implements Serializable {
 
     private String id;
 
-    private String timesId;
 
     private String number;
 
-    private String startTime;
 
-    private String endTime;
 
     private String signed;
 
@@ -36,6 +33,19 @@ public class CourseTimeDetail implements Serializable {
     private String notice;
 
     private List<Student> students;
+    /**
+     * times_id : 284
+     * start_time : 1544148000
+     * end_time : 1544150700
+     * img : home/201812061115586108957.png
+     * time_str : 周五 10:00~10:45
+     */
+
+    private String times_id;
+    private String start_time;
+    private String end_time;
+    private String img;
+    private String time_str;
 
 
     public String getId() {
@@ -46,13 +56,7 @@ public class CourseTimeDetail implements Serializable {
         this.id = id;
     }
 
-    public String getTimesId() {
-        return timesId;
-    }
 
-    public void setTimesId(String timesId) {
-        this.timesId = timesId;
-    }
 
     public String getNumber() {
         return number;
@@ -62,21 +66,7 @@ public class CourseTimeDetail implements Serializable {
         this.number = number;
     }
 
-    public String getStartTime() {
-        return startTime;
-    }
 
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    public String getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
 
     public String getSigned() {
         return signed;
@@ -140,5 +130,45 @@ public class CourseTimeDetail implements Serializable {
 
     public void setStudents(List<Student> students) {
         this.students = students;
+    }
+
+    public String getTimes_id() {
+        return times_id;
+    }
+
+    public void setTimes_id(String times_id) {
+        this.times_id = times_id;
+    }
+
+    public String getStart_time() {
+        return start_time;
+    }
+
+    public void setStart_time(String start_time) {
+        this.start_time = start_time;
+    }
+
+    public String getEnd_time() {
+        return end_time;
+    }
+
+    public void setEnd_time(String end_time) {
+        this.end_time = end_time;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getTime_str() {
+        return time_str;
+    }
+
+    public void setTime_str(String time_str) {
+        this.time_str = time_str;
     }
 }

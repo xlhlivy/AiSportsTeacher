@@ -44,7 +44,7 @@ class Examination : Serializable{
             type
             lessonId
             item
-            students = this@Examination.students.map { it.memberId.toString() }.toMutableList()
+            students = this@Examination.students.map { it.member_id.toString() }.toMutableList()
         }
         return updater
     }

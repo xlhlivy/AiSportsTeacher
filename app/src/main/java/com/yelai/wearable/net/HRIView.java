@@ -8,10 +8,10 @@ import cn.droidlover.xdroidmvp.mvp.IView;
 
 public interface HRIView<P> extends IView<P> {
 
-    default void showError(String msg){};
+    default void showError(String msg){}
 
-    default void showIndicator(){};
+    default void showIndicator(){}
 
-    default void hideIndicator(){};
+    default void hideIndicator(){}
 
 }

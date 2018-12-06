@@ -13,15 +13,14 @@ import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
 import com.yelai.wearable.R
 import com.yelai.wearable.base.BaseActivity
+import com.yelai.wearable.contract.CourseContract
 import com.yelai.wearable.entity.TabEntity
+import com.yelai.wearable.load
 import com.yelai.wearable.model.CourseTimeDetail
 import com.yelai.wearable.model.Page
 import com.yelai.wearable.model.Student
-import com.yelai.wearable.contract.CourseContract
-import com.yelai.wearable.load
 import com.yelai.wearable.present.PCourse
 import kotlinx.android.synthetic.main.course_activity_detail.*
-import kotlin.collections.ArrayList
 
 
 /**
@@ -53,7 +52,7 @@ class CourseDetailActivity : BaseActivity<CourseContract.Presenter>(), CourseCon
 
             bulletinBoard.notice(data.notice)
 
-            studentsFragment.courseTimeDetail = data;
+            studentsFragment.courseTimeDetail = data
 
 
 //            var list = ArrayList<Student>()
@@ -84,45 +83,47 @@ class CourseDetailActivity : BaseActivity<CourseContract.Presenter>(), CourseCon
     private fun initViewWithData(data:CourseTimeDetail){
         when(data.type){
             "1"->{
-                tvCourseType.text = "教学课";
+                tvCourseType.text = "教学课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_green_background)
                 ivBackground.load(R.drawable.course_item_background_banner1)
 
             }
 
             "2"->{
-                tvCourseType.text = "训练课";
+                tvCourseType.text = "训练课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_orange_background)
                 ivBackground.load(R.drawable.course_item_background_banner2)
 
             }
 
             "3"->{
-                tvCourseType.text = "兴趣课";
+                tvCourseType.text = "兴趣课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_red_background)
                 ivBackground.load(R.drawable.course_item_background_banner3)
 
 
             }
             else->{
-                tvCourseType.text = "训练课";
+                tvCourseType.text = "训练课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_orange_background)
                 ivBackground.load(R.drawable.course_item_background_banner2)
 
             }
         }
+        ivBackground.load(data.img)
 
         tvCourseName.text = data.title
 
         tvCourseDetail.text = "课次: ${data.number}/${data.times}"
 
-        tvCourseTime.text = "上课时间: ${data.startTime}"
+        tvCourseTime.text = "上课时间: ${data.time_str}"
 
         tvAssign.text = "${data.signed}"
 
         tvExceptionCnt.text = "${data.abnormal}"
 
         tvStep.text = "${data.step}"
+
 
     }
 
@@ -179,7 +180,7 @@ class CourseDetailActivity : BaseActivity<CourseContract.Presenter>(), CourseCon
             override fun onTabReselect(position: Int) {
                 if (position == 0) {
 //                    tabLayout.showMsg(0, 2)
-                    //                    UnreadMsgUtils.show(mTabLayout_2.getMsgView(0), mRandom.nextInt(100) + 1);
+                    //                    UnreadMsgUtils.show(mTabLayout_2.getMsgView(0), mRandom.nextInt(100) + 1)
                 }
             }
         })
@@ -198,7 +199,7 @@ class CourseDetailActivity : BaseActivity<CourseContract.Presenter>(), CourseCon
             }
         })
 
-        viewPager.offscreenPageLimit = 2;
+        viewPager.offscreenPageLimit = 2
         viewPager.currentItem = 0
     }
 

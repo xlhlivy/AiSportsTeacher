@@ -55,7 +55,7 @@ class ScoreRecordRunStopWatchActivity : BaseActivity<PViod>() {
         mToolbar.tvRight.textColorResource = R.color.tab_text_selected
 
         tvRequire.text = item.require
-        tvScore.text = "录入成绩:  分钟"
+        tvScore.text = "录入成绩:  时间"
 
 //        backgroundLayout.backgroundColorResource = R.color.white
 
@@ -104,7 +104,7 @@ class ScoreRecordRunStopWatchActivity : BaseActivity<PViod>() {
 
                     time+=timeSpan
                     runOnUiThread {
-                        tvTime.text = "时间要求:${if(item.type == "6"){time.to50Txt()}else{time.to800Txt()}}"
+                        tvTime.text = "时间要求:  ${if(item.type == "6"){time.to50Txt()}else{time.to800Txt()}}"
                     }
                 }
             }
@@ -187,7 +187,7 @@ class ScoreRecordRunStopWatchActivity : BaseActivity<PViod>() {
 //                }
 //            }
 //
-            ScoreRecordRunAssignScoreActivity.launch(this,item,adapter.dataSource.map { it }.toCollection(ArrayList<String>()))
+            ScoreRecordRunAssignScoreActivity.launch(this,item,adapter.dataSource.map { it }.toCollection(ArrayList()))
         }
     }
 

@@ -24,7 +24,7 @@ public class Student implements Serializable {
 //    abnormal：异常（0：否 1：是）
     private int abnormal;//异常
 
-    private int memberId;//
+//    private int memberId;//
 
     private int heart;//
 
@@ -37,6 +37,11 @@ public class Student implements Serializable {
      * 仅用于传递参数
      */
     private String timesId;
+    /**
+     * member_id : 1012
+     */
+
+    private int member_id;
 
     public String getHeadImg() {
         return headImg;
@@ -86,13 +91,13 @@ public class Student implements Serializable {
         this.abnormal = abnormal;
     }
 
-    public int getMemberId() {
-        return memberId;
-    }
+//    public int getMemberId() {
+//        return memberId;
+//    }
 
-    public void setMemberId(int memberId) {
-        this.memberId = memberId;
-    }
+//    public void setMemberId(int memberId) {
+//        this.memberId = memberId;
+//    }
 
     public int getHeart() {
         return heart;
@@ -100,5 +105,13 @@ public class Student implements Serializable {
 
     public void setHeart(int heart) {
         this.heart = heart;
+    }
+
+    public int getMember_id() {
+        return member_id;
+    }
+
+    public void setMember_id(int member_id) {
+        this.member_id = member_id;
     }
 }

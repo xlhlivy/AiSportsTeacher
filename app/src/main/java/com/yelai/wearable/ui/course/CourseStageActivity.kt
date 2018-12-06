@@ -16,10 +16,10 @@ import cn.droidlover.xrecyclerview.XRecyclerAdapter
 import com.yelai.wearable.AppData
 import com.yelai.wearable.R
 import com.yelai.wearable.base.BaseActivity
-import com.yelai.wearable.model.CourseTimeDetail
-import com.yelai.wearable.model.CourseTimeStep
 import com.yelai.wearable.contract.CourseContract
 import com.yelai.wearable.load
+import com.yelai.wearable.model.CourseTimeDetail
+import com.yelai.wearable.model.CourseTimeStep
 import com.yelai.wearable.present.PCourse
 import com.yelai.wearable.showToast
 import kotlinx.android.synthetic.main.course_activity_stage.*
@@ -60,7 +60,7 @@ class CourseStageActivity : BaseActivity<CourseContract.Presenter>(), CourseCont
 
             CourseContract.Success.CourseTimesStepSave->{
                 showToast("保存成功")
-                p.courseTimesStep(courseTimeDetail.timesId)
+                p.courseTimesStep(courseTimeDetail.times_id)
             }
 
 //            CourseContract.Success.CourseTimesStepAdd->{
@@ -92,7 +92,7 @@ class CourseStageActivity : BaseActivity<CourseContract.Presenter>(), CourseCont
             list.add(it.apply { isParent = true })
             list.addAll(it.child)
 
-            val self = it;
+            val self = it
             it.child.forEach {
                 it.parent = self
                 it.isParent = false
@@ -143,28 +143,28 @@ class CourseStageActivity : BaseActivity<CourseContract.Presenter>(), CourseCont
 
         when(courseTimeDetail.type){
             "1"->{
-                tvCourseType.text = "教学课";
+                tvCourseType.text = "教学课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_green_background)
                 ivBackground.load(R.drawable.course_item_background_banner1)
 
             }
 
             "2"->{
-                tvCourseType.text = "训练课";
+                tvCourseType.text = "训练课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_orange_background)
                 ivBackground.load(R.drawable.course_item_background_banner2)
 
             }
 
             "3"->{
-                tvCourseType.text = "兴趣课";
+                tvCourseType.text = "兴趣课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_red_background)
                 ivBackground.load(R.drawable.course_item_background_banner3)
 
 
             }
             else->{
-                tvCourseType.text = "训练课";
+                tvCourseType.text = "训练课"
                 tvCourseType.setBackgroundResource(R.drawable.day_right_circle_orange_background)
                 ivBackground.load(R.drawable.course_item_background_banner2)
 
@@ -175,7 +175,7 @@ class CourseStageActivity : BaseActivity<CourseContract.Presenter>(), CourseCont
 
         tvCourseDetail.text = "课次: ${courseTimeDetail.number}/${courseTimeDetail.times}"
 
-        tvCourseTime.text = "上课时间: ${courseTimeDetail.startTime}"
+        tvCourseTime.text = "上课时间: ${courseTimeDetail.start_time}"
 
 
 
@@ -204,7 +204,7 @@ class CourseStageActivity : BaseActivity<CourseContract.Presenter>(), CourseCont
 
         contentLayout.showContent()
 
-        p.courseTimesStep(courseTimeDetail.timesId)
+        p.courseTimesStep(courseTimeDetail.times_id)
 
 
 //        adapter.addData(listOf(MessageEntity("张三","7小时💰","巴拉巴拉",0),
@@ -246,11 +246,11 @@ class CourseStageActivity : BaseActivity<CourseContract.Presenter>(), CourseCont
 
             try{
 
-                val data = AppData.gson.toJson(list);
+                val data = AppData.gson.toJson(list)
                 println(data)
 
                 p.courseTimesStepSave(mapOf(
-                        "times_id" to courseTimeDetail.timesId,
+                        "times_id" to courseTimeDetail.times_id,
                         "step" to step
                 ))
 

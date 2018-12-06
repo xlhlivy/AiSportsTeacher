@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import cn.droidlover.xdroidmvp.mvp.KLazyFragment
 import com.flyco.tablayout.listener.CustomTabEntity
-import com.yelai.wearable.AppData
-
 import com.yelai.wearable.R
 import com.yelai.wearable.entity.TabEntity
 import com.yelai.wearable.present.PViod
 import kotlinx.android.synthetic.main.course_fragment.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by hr on 18/9/16.
@@ -33,7 +30,7 @@ class CourseFragment : KLazyFragment<PViod>() {
         mTabEntities.clear()
         mFragments.clear()
 
-        tvAddCourse.paint.flags = Paint. UNDERLINE_TEXT_FLAG;
+        tvAddCourse.paint.flags = Paint. UNDERLINE_TEXT_FLAG
 
         for (i in mTitles.indices) {
             mTabEntities.add(TabEntity(mTitles[i], 0,0))
@@ -54,7 +51,7 @@ class CourseFragment : KLazyFragment<PViod>() {
 ////            mWeekDatePicker.show()
 //        }
 
-//        PickTimeDialog(context).create().cantlable();
+//        PickTimeDialog(context).create().cantlable()
 
 
     }

@@ -28,6 +28,7 @@ import com.yelai.wearable.base.BaseListActivity
 import com.yelai.wearable.model.ExaminationItem
 import com.yelai.wearable.model.ExaminationScore
 import com.yelai.wearable.model.Page
+import com.yelai.wearable.model.Student
 import com.yelai.wearable.net.ExaminationContract
 import com.yelai.wearable.net.PExamination
 import com.yelai.wearable.showToast
@@ -39,26 +40,27 @@ import org.jetbrains.anko.textColorResource
  * Created by hr on 18/9/16.
  */
 
-class ScoreRecordRunAssignScoreActivity : BaseListActivity<ExaminationScore,ExaminationContract.Presenter>(),ExaminationContract.View {
+class ScoreRecordRunAssignScoreActivity : BaseListActivity<Student,ExaminationContract.Presenter>(),ExaminationContract.View {
 
     override fun success(type: ExaminationContract.Success, data: Any) {
         if(type == ExaminationContract.Success.ExaminationResult){
-
-            list(Page(data as List<ExaminationScore>))
+//            list(Page(data as List<ExaminationScore>))
         }else if(type == ExaminationContract.Success.SaveExaminationResult){
             showToast("保存成绩成功")
             ScoreRecordRunActivity.launch(context,item)
 //            contentLayout.recyclerView.refreshData()
+        }else if(type == ExaminationContract.Success.ExaminationStudents){
+            list(Page(data as List<Student>))
         }
     }
 
     private var tempData:ExaminationScore? = null
 
-    override fun initAdapter(): SimpleRecAdapter<ExaminationScore, ViewHolder<ExaminationScore>> = object: BaseAdapter<ExaminationScore>(context){
+    override fun initAdapter(): SimpleRecAdapter<Student, ViewHolder<Student>> = object: BaseAdapter<Student>(context){
 
         override fun getLayoutId(): Int = R.layout.examination_record_run_assign_score_item
 
-        override fun onBindViewHolder(holder: ViewHolder<ExaminationScore>, position: Int) {
+        override fun onBindViewHolder(holder: ViewHolder<Student>, position: Int) {
             val item = data[position]
 
             holder.setData(item)
@@ -66,26 +68,27 @@ class ScoreRecordRunAssignScoreActivity : BaseListActivity<ExaminationScore,Exam
             holder.itemView.setOnClickListener {
                 if(scores.size != 0){
                     pvStatusOptions.show()
-                    tempData = item
+//                    tempData = item
                 }
             }
         }
 
-        override fun setData(itemView: View, data: ExaminationScore) {
+        override fun setData(itemView: View, data: Student) {
             itemView.tvName.text = data.name
             itemView.tvRank.visibility = View.GONE
-            itemView.tvTime.text = data.timeStr
-            if(data.rank != null && data.rank.isNotEmpty()){
-                itemView.tvRank.text = data.rank
-                itemView.tvRank.visibility = View.VISIBLE
-            }
+            itemView.tvTime.text = data.timesId
+//            if(data.rank != null && data.rank.isNotEmpty()){
+//                itemView.tvRank.text = data.rank
+//                itemView.tvRank.visibility = View.VISIBLE
+//            }
         }
 
     }
 
 
     override fun onRefresh() {
-        p.examinationResult(item.id)
+//        p.examinationResult(item.id)
+        p.examinationStudents(item.id)
     }
 
     override fun onLoadMore(page: Int) {}
@@ -126,8 +129,8 @@ class ScoreRecordRunAssignScoreActivity : BaseListActivity<ExaminationScore,Exam
     override fun onToolbarActionsClick(which: Int, view: View?) {
         super.onToolbarActionsClick(which, view)
         if(which == SimpleToolbar.RIGHT_TEXT){
-            adapter.dataSource.forEach { it.result = it.time }
-            p.saveExaminationResult(item.id,adapter.dataSource)
+//            adapter.dataSource.forEach { it.result = it.time }
+//            p.saveExaminationResult(item.id,adapter.dataSource)
         }
     }
 

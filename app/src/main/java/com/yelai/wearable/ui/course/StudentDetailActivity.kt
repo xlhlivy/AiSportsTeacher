@@ -5,14 +5,16 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import cn.droidlover.xdroidmvp.router.Router
-import com.yelai.wearable.*
+import com.yelai.wearable.AppData
+import com.yelai.wearable.AppManager
+import com.yelai.wearable.R
 import com.yelai.wearable.base.BaseActivity
+import com.yelai.wearable.contract.CourseContract
 import com.yelai.wearable.model.Student
 import com.yelai.wearable.model.StudentInfo
-import com.yelai.wearable.contract.CourseContract
 import com.yelai.wearable.present.PCourse
+import com.yelai.wearable.showToast
 import kotlinx.android.synthetic.main.course_activity_student_detail.*
-import kotlinx.android.synthetic.main.course_item.view.*
 import org.jetbrains.anko.backgroundColorResource
 import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.sdk25.coroutines.onClick
@@ -80,12 +82,12 @@ class StudentDetailActivity : BaseActivity<CourseContract.Presenter>(), CourseCo
         tvSign.onClick {
 
             remarkStudent = "1"
-            p.studentAssign(student!!.timesId,student!!.memberId.toString(),"1")
+            p.studentAssign(student!!.timesId,student!!.member_id.toString(),"1")
         }
 
         tvRemove.onClick {
             remarkStudent = "5"
-            p.studentAssign(student!!.timesId,student!!.memberId.toString(),"5")
+            p.studentAssign(student!!.timesId,student!!.member_id.toString(),"5")
         }
 
 
@@ -191,7 +193,7 @@ class StudentDetailActivity : BaseActivity<CourseContract.Presenter>(), CourseCo
         }
 
 
-        p.studentInfo(student!!.memberId.toString())
+        p.studentInfo(student!!.member_id.toString())
 
     }
 

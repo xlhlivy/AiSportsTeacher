@@ -70,8 +70,8 @@ class SettingActivity : BaseActivity<PViod>(){
                     .showCancelButton(true)
                     .setConfirmClickListener { sDialog -> run{
 
-                        AppData.user = null;
-                        AppData.userInfo = null;
+                        AppData.user = null
+                        AppData.userInfo = null
 
                         LoginActivity.launch(this@SettingActivity.context)
 
@@ -125,16 +125,16 @@ class SettingActivity : BaseActivity<PViod>(){
                                         .setConfirmText("好的")
                                         .showCancelButton(false)
                                         .setConfirmClickListener(null)
-                                        .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+                                        .changeAlertType(SweetAlertDialog.SUCCESS_TYPE)
                                 }
                                 .show()
                     }
                     2->{
 
-                        WebActivity.launch(this@SettingActivity.context,"http://sport.aieye8.com/item/notes.html","运动风险须知");
+                        WebActivity.launch(this@SettingActivity.context,"http://sport.aieye8.com/item/notes.html","运动风险须知")
                     }
                     3->{
-                        WebActivity.launch(this@SettingActivity.context,"http://sport.aieye8.com/item/about.html","关于乐生");
+                        WebActivity.launch(this@SettingActivity.context,"http://sport.aieye8.com/item/about.html","关于乐生")
 
                     }
                 }

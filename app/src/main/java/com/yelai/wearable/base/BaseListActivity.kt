@@ -14,7 +14,7 @@ import java.io.Serializable
  * Created by hr on 18/9/16.
  */
 
-abstract class BaseListActivity<D : Serializable,P : IPresent<*>>() : BaseActivity<P>(){
+abstract class BaseListActivity<D : Serializable,P : IPresent<*>> : BaseActivity<P>(){
 
     override fun showError(errorMsg: String) {
         super.showError(errorMsg)
@@ -26,7 +26,7 @@ abstract class BaseListActivity<D : Serializable,P : IPresent<*>>() : BaseActivi
 
 
 
-    public open fun list(pager: Page<List<D>>) {
+     open fun list(pager: Page<List<D>>) {
 
         val page = pager.currPage
 
@@ -51,7 +51,7 @@ abstract class BaseListActivity<D : Serializable,P : IPresent<*>>() : BaseActivi
          initAdapter()
     }
 
-    abstract fun initAdapter():SimpleRecAdapter<D, ViewHolder<D>>;
+    abstract fun initAdapter():SimpleRecAdapter<D, ViewHolder<D>>
 
     open fun divider(){
 //        contentLayout.recyclerView.horizontalDividerMargin(R.color.divider_color,R.dimen.divider,R.dimen.padding_common_h,R.dimen.padding_common_h)
@@ -84,9 +84,9 @@ abstract class BaseListActivity<D : Serializable,P : IPresent<*>>() : BaseActivi
 
     }
 
-    abstract fun onRefresh();
+    abstract fun onRefresh()
 
-    abstract fun onLoadMore(page:Int);
+    abstract fun onLoadMore(page:Int)
 
 //
 //    internal inner class Adapter(context: Context) : SimpleRecAdapter<D,ViewHolder<D>>(context) {

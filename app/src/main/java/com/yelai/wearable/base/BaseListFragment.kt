@@ -1,13 +1,11 @@
 package com.yelai.wearable.base
 
 import android.os.Bundle
-import android.view.View
 import cn.droidlover.xdroidmvp.base.SimpleRecAdapter
 import cn.droidlover.xdroidmvp.mvp.IPresent
 import cn.droidlover.xrecyclerview.XRecyclerAdapter
 import cn.droidlover.xrecyclerview.XRecyclerView
 import com.yelai.wearable.adapter.ViewHolder
-import com.yelai.wearable.R
 import com.yelai.wearable.model.Page
 import kotlinx.android.synthetic.main.recyclerview_layout.*
 import java.io.Serializable
@@ -26,7 +24,7 @@ abstract class BaseListFragment<D : Serializable,P : IPresent<*>>() : BaseFragme
         }
     }
 
-    public open fun list(pager: Page<List<D>>) {
+     open fun list(pager: Page<List<D>>) {
 
         val page = pager.currPage
 
